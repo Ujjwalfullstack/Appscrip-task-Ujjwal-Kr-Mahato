@@ -1,0 +1,116 @@
+.footer {
+  background: #000000;
+  padding: 2rem;
+  font-family: sans-serif;
+  color: #ffffff;
+}
+
+.footerTop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.newsletter,
+.contact {
+  flex: 1 1 300px;
+}
+
+.newsletter h4,
+.contact h4,
+.footerLinks h4 {
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.newsletterInput {
+  display: flex;
+  margin-top: 40px;
+  gap: 10px;
+}
+
+.newsletterInput input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+.newsletterInput button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.footerLinks > div {
+  flex: 1 1 200px;
+}
+
+.socialIcons,
+.paymentIcons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 0.5rem;
+}
+
+.divider {
+  margin-top: 2rem;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.footerBottom {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.footerBottom p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .footerTop,
+  .footerLinks {
+    flex-direction: column;
+  }
+
+  .newsletterInput {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .newsletterInput input,
+  .newsletterInput button {
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  .newsletterInput button {
+    margin-top: 0;
+  }
+
+  .footerLinks > div {
+    flex: 1 1 100%;
+  }
+
+  .footerBottom {
+    text-align: center;
+  }
+}

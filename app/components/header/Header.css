@@ -1,0 +1,163 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #fff;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+
+.icons img {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icons img:hover {
+  transform: scale(1.1);
+}
+
+.icons select {
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f8f8f8;
+}
+
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.menu li {
+  cursor: pointer;
+  position: relative;
+  padding: 6px 0;
+}
+
+.menu li::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background-color: #333;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.menu li:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .icons {
+    order: 3;
+    flex: 1 1 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    display: none;
+    padding: 1rem 0;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .icons img {
+    width: 18px;
+  }
+
+  .icons select {
+    font-size: 12px;
+  }
+
+  .menu-toggle {
+    font-size: 24px;
+  }
+}
